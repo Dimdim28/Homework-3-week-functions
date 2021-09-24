@@ -2,41 +2,11 @@
 
 
 const ipToInt = (ip = '127.0.0.1') => {
-  const fn = (res, item) => (res << 8) + parseInt(item);
-  return ip.split('.').reduce(fn, 0);
+const fn = (res, item) => (res << 8) + parseInt(item);
+return ip.split('.').reduce(fn, 0);
 };
 
 
-
-// мой метод
-
-
-/*const ipToInt = (ip ='127.0.0.1') =>{
-let IpMass = ip.split('.');                       //   Разбили на массив символов через точку
-
-
-
-for(let i = 0; i < IpMass.length; i++){
-  IpMass[i] = parseInt(IpMass[i]);                         // Превратили их из строк в числа
-}
-
-
-for( let i =0; i<IpMass.length;i++){
-  for( let j =0; j< i;j++){                       // Смещение влево для каждого н елемента н раз на 8
- IpMass[j]<<=8;
-}
-}
- 
-
-let NewIp = 0;
-for(let i =0; i< IpMass.length; i++){              //сложили эти числа и получили айпи
-  NewIp+=IpMass[i];
-}
-
-return NewIp;   
-  }
-
-*/
 
 console.dir(ipToInt());
 console.dir(ipToInt('10.0.0.1'));
